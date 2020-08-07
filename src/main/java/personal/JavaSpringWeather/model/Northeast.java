@@ -6,7 +6,8 @@ import lombok.Data;
 
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Weather {
-	public String cod;
-	public Lists[] list;
+public class Northeast {
+
+	public String lat;
+	public String lng;
 }

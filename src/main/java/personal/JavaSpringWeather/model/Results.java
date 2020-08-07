@@ -6,9 +6,7 @@ import lombok.Data;
 
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class List {
-	public Main main;
-	public String dt_txt;
-	public String date;
-	public String time;
+public class Results {
+
+	Bounds bounds;
 }

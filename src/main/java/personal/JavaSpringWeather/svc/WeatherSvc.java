@@ -1,9 +1,15 @@
 package personal.JavaSpringWeather.svc;
 
+import java.util.List;
+
 import personal.JavaSpringWeather.model.FormInput;
+import personal.JavaSpringWeather.model.GeoCode;
+import personal.JavaSpringWeather.model.SeveralDayForcast;
 import personal.JavaSpringWeather.model.Weather;
 
 public interface WeatherSvc {
 
-	public Weather weatherAGoGo(FormInput weather);
+	public List<SeveralDayForcast> weatherAGoGo(FormInput weather);
+	
+	public GeoCode locationToGeo(FormInput form);
 }

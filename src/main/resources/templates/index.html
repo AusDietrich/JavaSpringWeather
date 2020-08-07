@@ -2,7 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
 <body>
-
+	<div style="color:black, height:100px;"  class="header">
+	
+	</div>
 	<h1>Weather</h1>
 	<h2 th:text="${weather}"></h2>
 	<form action="#" th:action="@{/weatherAPI}" th:object="${form}" method="POST">

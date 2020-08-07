@@ -13,23 +13,20 @@
 <body>
 <div class="container">
 	<h1>Weather Returned</h1>
+	<iframe style="width:1000px;height:500px;" th:src="${url}" title="openweather"></iframe>
 	<table  class="table" id="countryList">
 	    <thead>
 	        <tr>
 	            <th> Date </th>
-	            <th> Time </th>
 	            <th> Min Temp </th>
-	            <th> Current Temp </th>
 	            <th> Max Temp </th>
 	        </tr>
 	    </thead>
 	    <tbody>
 	        <tr th:each="weathers : ${weather}">
 	            <td th:text="*{weathers.date}"></td>
-	            <td th:text="*{weathers.time}"></td>
-	            <td th:text="*{weathers.main.temp_min}"></td>
-	            <td th:text="*{weathers.main.temp}"></td>
-	            <td th:text="*{weathers.main.temp_max}"></td>
+	            <td th:text="*{weathers.tempMin}"></td>
+	            <td th:text="*{weathers.tempMax}"></td>
 		    </tr>
     	</tbody>
 	</table>
