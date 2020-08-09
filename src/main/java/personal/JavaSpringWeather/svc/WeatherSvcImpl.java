@@ -3,6 +3,7 @@ package personal.JavaSpringWeather.svc;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import personal.JavaSpringWeather.model.ColorsEntity;
 import personal.JavaSpringWeather.model.CurrentWeather;
 import personal.JavaSpringWeather.model.FormInput;
 import personal.JavaSpringWeather.model.GeoCode;
@@ -83,4 +84,9 @@ public class WeatherSvcImpl implements WeatherSvc {
 		return returnedGeo;
 	}
 
+	@Override
+	public List<ColorsEntity> colors(){
+		List<ColorsEntity> colors = apiCaller.colors();
+		return colors;
+	}
 }

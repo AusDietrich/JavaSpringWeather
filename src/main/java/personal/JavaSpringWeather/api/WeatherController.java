@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
+import personal.JavaSpringWeather.model.ColorsEntity;
 import personal.JavaSpringWeather.model.FormInput;
 import personal.JavaSpringWeather.model.GeoCode;
 import personal.JavaSpringWeather.model.Results;
@@ -28,6 +29,16 @@ public class WeatherController {
 		model.addAttribute("weather", "");
 		ModelAndView modelAndView = new ModelAndView();
 	    modelAndView.setViewName("index");
+	    return modelAndView;
+	}
+	@GetMapping("/Colors")
+	public ModelAndView colors(Model model){
+		
+		List<ColorsEntity> colors = svc.colors();
+		model.addAttribute("allColors", colors);
+		System.out.println(colors.get(0).getColors());
+		ModelAndView modelAndView = new ModelAndView();
+	    modelAndView.setViewName("colors");
 	    return modelAndView;
 	}
 	
